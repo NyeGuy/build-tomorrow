@@ -1,0 +1,37 @@
+---
+import site from '../../content/site.json';
+import { isCurrentPath, withBase } from '../lib/paths';
+import WhiteButton from './WhiteButton.astro';
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href={withBase()}>
+      <span class="brand__mark" aria-hidden="true">[{site.logo.bracket}]</span>
+      <span>
+        <span class="brand__name">{site.name}</span>
+        <span class="brand__meta">{site.school} · {site.institution}</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        {
+          site.nav.map((item) => (
+            <li>
+              <a
+                href={withBase(item.href)}
+                class:list={[{ 'is-active': isCurrentPath(item.href, pathname) }]}
+                aria-current={isCurrentPath(item.href, pathname) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <WhiteButton href={withBase(site.headerCta.href)}>{site.headerCta.label}</WhiteButton>
+  </div>
+</header>

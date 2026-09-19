@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "eyebrow": "STEC fundraising",
+    "headline": "Build Tomorrow",
+    "lead": "A campaign for the School of Creative Technology. Equip studios. Fund Design Tomorrow. Put tools in student hands.",
+    "photo": {
+      "bracket": "Photo",
+      "caption": "Campaign still forthcoming"
+    }
+  },
+  "ways": {
+    "eyebrow": "How to help",
+    "headline": "Three ways to give",
+    "items": [
+      {
+        "kicker": "01",
+        "title": "Technology Fund",
+        "body": "Give through SCAD Giving. The STEC Technology Fund buys, repairs, and refreshes the tools students use.",
+        "cta": "Give to the Technology Fund",
+        "fund": "TECH_FUND_URL",
+        "page": "technology/"
+      },
+      {
+        "kicker": "02",
+        "title": "Design Tomorrow",
+        "body": "Sponsor at Title, Presenting, Track, or Partner. Sponsorships are processed by SCAD Giving.",
+        "cta": "Give to Design Tomorrow",
+        "fund": "DT_FUND_URL",
+        "page": "designtomorrow/"
+      },
+      {
+        "kicker": "03",
+        "title": "Hardware",
+        "body": "Fund or ship items from the wishlist. Use the two forms on Give to pledge in-kind or inquire.",
+        "cta": "Open the wishlist",
+        "fund": null,
+        "page": "give/"
+      }
+    ]
+  },
+  "goal": {
+    "eyebrow": "Campaign goal",
+    "amount": "$200,000",
+    "by": "by May 10",
+    "line": "$200,000 by May 10"
+  }
+}

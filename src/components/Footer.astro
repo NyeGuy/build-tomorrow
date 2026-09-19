@@ -1,0 +1,34 @@
+---
+import site from '../../content/site.json';
+import { withBase } from '../lib/paths';
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <a class="brand" href={withBase()}>
+        <span class="brand__mark" aria-hidden="true">[{site.logo.bracket}]</span>
+        <span>
+          <span class="brand__name">{site.name}</span>
+          <span class="brand__meta">{site.schoolFull}</span>
+        </span>
+      </a>
+      <nav aria-label="Footer">
+        <ul>
+          {
+            site.nav.map((item) => (
+              <li>
+                <a href={withBase(item.href)}>{item.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <p>
+        <a href={site.scad.href} rel="noopener noreferrer">{site.scad.label}</a>
+      </p>
+    </div>
+    <p class="disclaimer">{site.footer.line}</p>
+    <p class="disclaimer disclaimer--sub">{site.footer.gifts}</p>
+  </div>
+</footer>

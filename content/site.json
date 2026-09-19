@@ -1,0 +1,35 @@
+{
+  "name": "Build Tomorrow",
+  "school": "STEC",
+  "schoolFull": "School of Creative Technology",
+  "institution": "SCAD",
+  "title": "Build Tomorrow — STEC Fundraising",
+  "description": "Build Tomorrow is the STEC fundraising campaign. Give through SCAD Giving to the Technology Fund or Design Tomorrow, or place hardware from the wishlist.",
+  "location": "Savannah, Georgia",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Technology", "href": "technology/" },
+    { "label": "Design Tomorrow", "href": "designtomorrow/" },
+    { "label": "Give", "href": "give/" }
+  ],
+  "headerCta": {
+    "label": "Give",
+    "href": "give/"
+  },
+  "scad": {
+    "label": "SCAD",
+    "href": "https://www.scad.edu"
+  },
+  "giving": {
+    "label": "SCAD Giving",
+    "note": "Cash gifts are processed by SCAD Giving. White buttons advertise out to those pages."
+  },
+  "footer": {
+    "line": "School of Creative Technology · Savannah College of Art and Design",
+    "gifts": "Gifts are processed by SCAD Giving. This microsite does not collect payments."
+  },
+  "logo": {
+    "bracket": "Logo",
+    "pending": true
+  }
+}
