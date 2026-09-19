@@ -23,7 +23,7 @@
   "wishlist": {
     "eyebrow": "In-kind",
     "headline": "Hardware wishlist",
-    "lead": "Approved SKUs and photos land when Advancement and STEC lock the list. Phase 1 shows categories only — no brands, no prices.",
+    "lead": "Categories only until STEC and Advancement lock the approved list. Photos forthcoming.",
     "items": [
       {
         "name": "Compute workstations",
@@ -60,7 +60,7 @@
   "forms": {
     "eyebrow": "Forms",
     "headline": "Two forms",
-    "lead": "Phase 1 ships the markup. Paste the Advancement endpoints when they exist. Submits do not post until those actions are live.",
+    "lead": "These forms open when Advancement provides the endpoints. Submissions are not collected on this page yet.",
     "items": [
       {
         "id": "in-kind",
@@ -69,7 +69,7 @@
         "action": "#form-in-kind",
         "method": "get",
         "submit": "Submit pledge",
-        "note": "Action is a placeholder. Paste the live Advancement form URL in content/give.json.",
+        "note": "This form does not post until Advancement provides a live endpoint.",
         "fields": [
           { "name": "name", "label": "Name", "type": "text", "required": true },
           { "name": "email", "label": "Email", "type": "email", "required": true },
@@ -86,7 +86,7 @@
         "action": "#form-sponsor",
         "method": "get",
         "submit": "Submit inquiry",
-        "note": "Action is a placeholder. Paste the live Advancement form URL in content/give.json.",
+        "note": "This form does not post until Advancement provides a live endpoint.",
         "fields": [
           { "name": "name", "label": "Name", "type": "text", "required": true },
           { "name": "email", "label": "Email", "type": "email", "required": true },
