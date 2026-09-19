@@ -1,0 +1,16 @@
+---
+interface Props {
+  label?: string;
+  caption?: string;
+  ratio?: string;
+}
+
+const { label = 'Photo', caption, ratio = '4 / 3' } = Astro.props;
+---
+
+<figure class="media-bracket" style={`--ratio: ${ratio}`}>
+  <div class="media-bracket__frame" aria-hidden="true">
+    <span>[{label}]</span>
+  </div>
+  {caption ? <figcaption>{caption}</figcaption> : null}
+</figure>

@@ -1,0 +1,17 @@
+{
+  "eyebrow": "Technology Fund",
+  "headline": "The school fund for tools.",
+  "lead": "The STEC Technology Fund is the cash path for Build Tomorrow. Gifts move through SCAD Giving. They buy, maintain, and replace the hardware and software STEC students work on.",
+  "body": [
+    "This is the school fund. One gift stocks the pool that keeps classrooms, shops, and studios current.",
+    "White buttons on this site advertise out to SCAD Giving. They do not collect a card here."
+  ],
+  "cta": {
+    "label": "Give to the Technology Fund",
+    "fund": "TECH_FUND_URL"
+  },
+  "photo": {
+    "bracket": "Photo",
+    "caption": "Studio still forthcoming"
+  }
+}

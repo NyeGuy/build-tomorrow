@@ -1,0 +1,33 @@
+{
+  "eyebrow": "Design Tomorrow",
+  "headline": "Sponsor the program.",
+  "lead": "Design Tomorrow is STEC’s industry program. Sponsorships are processed by SCAD Giving. Choose a tier. Recognition details ship when Advancement approves them.",
+  "cta": {
+    "label": "Give to Design Tomorrow",
+    "fund": "DT_FUND_URL"
+  },
+  "tiersEyebrow": "Sponsorship tiers",
+  "tiers": [
+    {
+      "name": "TITLE",
+      "body": "Lead recognition for Design Tomorrow."
+    },
+    {
+      "name": "PRESENTING",
+      "body": "Presenting recognition for Design Tomorrow."
+    },
+    {
+      "name": "TRACK",
+      "body": "Track-level recognition for Design Tomorrow."
+    },
+    {
+      "name": "PARTNER",
+      "body": "Partner recognition for Design Tomorrow."
+    }
+  ],
+  "note": "Gift levels and recognition details are forthcoming from Advancement.",
+  "photo": {
+    "bracket": "Photo",
+    "caption": "Program still forthcoming"
+  }
+}

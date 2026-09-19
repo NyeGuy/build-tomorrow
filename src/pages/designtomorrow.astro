@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MediaBracket from '../components/MediaBracket.astro';
+import WhiteButton from '../components/WhiteButton.astro';
+import designtomorrow from '../../content/designtomorrow.json';
+import site from '../../content/site.json';
+import { fundUrl } from '../lib/funds';
+---
+
+<BaseLayout title={`${designtomorrow.headline} — ${site.name}`}>
+  <section class="band hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">{designtomorrow.eyebrow}</p>
+        <h1>{designtomorrow.headline}</h1>
+        <p class="lead">{designtomorrow.lead}</p>
+        <div class="cta-row">
+          <WhiteButton href={fundUrl(designtomorrow.cta.fund)} external>
+            {designtomorrow.cta.label}
+          </WhiteButton>
+        </div>
+      </div>
+      <MediaBracket
+        label={designtomorrow.photo.bracket}
+        caption={designtomorrow.photo.caption}
+        ratio="5 / 4"
+      />
+    </div>
+  </section>
+
+  <section class="band band--raised">
+    <div class="wrap">
+      <p class="eyebrow">{designtomorrow.tiersEyebrow}</p>
+      <h2>TITLE · PRESENTING · TRACK · PARTNER</h2>
+      <ol class="tier-grid">
+        {
+          designtomorrow.tiers.map((tier) => (
+            <li class="tier-card">
+              <p class="tier-card__name">{tier.name}</p>
+              <p>{tier.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="fine-print">{designtomorrow.note}</p>
+    </div>
+  </section>
+</BaseLayout>

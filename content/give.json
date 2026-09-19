@@ -1,0 +1,106 @@
+{
+  "eyebrow": "Give",
+  "headline": "Three ways to give",
+  "lead": "Cash gifts advertise out to SCAD Giving. Hardware moves through the wishlist and the two forms on this page.",
+  "paths": [
+    {
+      "title": "Technology Fund",
+      "body": "Give through SCAD Giving to the STEC Technology Fund.",
+      "cta": "Give to the Technology Fund",
+      "fund": "TECH_FUND_URL"
+    },
+    {
+      "title": "Design Tomorrow",
+      "body": "Sponsor at Title, Presenting, Track, or Partner through SCAD Giving.",
+      "cta": "Give to Design Tomorrow",
+      "fund": "DT_FUND_URL"
+    },
+    {
+      "title": "Hardware",
+      "body": "Pledge an in-kind item or ask Advancement about a line on the wishlist."
+    }
+  ],
+  "wishlist": {
+    "eyebrow": "In-kind",
+    "headline": "Hardware wishlist",
+    "lead": "Categories only until STEC and Advancement lock the approved list. Photos forthcoming.",
+    "items": [
+      {
+        "name": "Compute workstations",
+        "use": "Student production seats — GPU class machines for realtime, film, and simulation work.",
+        "image": ""
+      },
+      {
+        "name": "XR kits",
+        "use": "Headsets and tracking for immersive classes and industry reviews.",
+        "image": ""
+      },
+      {
+        "name": "Capture",
+        "use": "Cameras, volume, and body / face capture for performance and spatial work.",
+        "image": ""
+      },
+      {
+        "name": "Audio",
+        "use": "Interfaces, mics, and monitoring for game, film, and installation sound.",
+        "image": ""
+      },
+      {
+        "name": "Fabrication",
+        "use": "Printers, cutters, and shop tools that turn digital work into objects.",
+        "image": ""
+      },
+      {
+        "name": "Networking and storage",
+        "use": "Switches, NAS, and backup so classes can move large media without friction.",
+        "image": ""
+      }
+    ]
+  },
+  "forms": {
+    "eyebrow": "Forms",
+    "headline": "Two forms",
+    "lead": "These forms open when Advancement provides the endpoints. Submissions are not collected on this page yet.",
+    "items": [
+      {
+        "id": "in-kind",
+        "title": "In-kind hardware pledge",
+        "intro": "Tell STEC what you can ship or fund from the wishlist.",
+        "action": "#form-in-kind",
+        "method": "get",
+        "submit": "Submit pledge",
+        "note": "This form does not post until Advancement provides a live endpoint.",
+        "fields": [
+          { "name": "name", "label": "Name", "type": "text", "required": true },
+          { "name": "email", "label": "Email", "type": "email", "required": true },
+          { "name": "organization", "label": "Organization", "type": "text", "required": false },
+          { "name": "item", "label": "Wishlist item", "type": "text", "required": true },
+          { "name": "quantity", "label": "Quantity", "type": "text", "required": false },
+          { "name": "notes", "label": "Notes", "type": "textarea", "required": false }
+        ]
+      },
+      {
+        "id": "sponsor",
+        "title": "Design Tomorrow inquiry",
+        "intro": "Ask about Title, Presenting, Track, or Partner.",
+        "action": "#form-sponsor",
+        "method": "get",
+        "submit": "Submit inquiry",
+        "note": "This form does not post until Advancement provides a live endpoint.",
+        "fields": [
+          { "name": "name", "label": "Name", "type": "text", "required": true },
+          { "name": "email", "label": "Email", "type": "email", "required": true },
+          { "name": "organization", "label": "Organization", "type": "text", "required": false },
+          {
+            "name": "tier",
+            "label": "Tier",
+            "type": "select",
+            "required": true,
+            "options": ["TITLE", "PRESENTING", "TRACK", "PARTNER"]
+          },
+          { "name": "notes", "label": "Notes", "type": "textarea", "required": false }
+        ]
+      }
+    ]
+  }
+}

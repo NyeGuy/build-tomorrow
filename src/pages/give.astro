@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MediaBracket from '../components/MediaBracket.astro';
+import WhiteButton from '../components/WhiteButton.astro';
+import give from '../../content/give.json';
+import site from '../../content/site.json';
+import { fundUrl } from '../lib/funds';
+
+interface Field {
+  name: string;
+  label: string;
+  type: string;
+  required: boolean;
+  options?: string[];
+}
+---
+
+<BaseLayout title={`${give.headline} — ${site.name}`}>
+  <section class="band hero">
+    <div class="wrap">
+      <p class="eyebrow">{give.eyebrow}</p>
+      <h1>{give.headline}</h1>
+      <p class="lead lead--narrow">{give.lead}</p>
+      <div class="way-grid way-grid--give">
+        {
+          give.paths.map((path) => (
+            <article class="way-card">
+              <h2>{path.title}</h2>
+              <p>{path.body}</p>
+              {path.fund && path.cta ? (
+                <WhiteButton href={fundUrl(path.fund)} external>
+                  {path.cta}
+                </WhiteButton>
+              ) : null}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--raised" id="wishlist">
+    <div class="wrap">
+      <p class="eyebrow">{give.wishlist.eyebrow}</p>
+      <h2>{give.wishlist.headline}</h2>
+      <p class="lead lead--narrow">{give.wishlist.lead}</p>
+      <ul class="wish-grid">
+        {
+          give.wishlist.items.map((item) => (
+            <li class="wish-card">
+              <MediaBracket label="Photo" ratio="16 / 10" />
+              <h3>{item.name}</h3>
+              <p>{item.use}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="forms">
+    <div class="wrap">
+      <p class="eyebrow">{give.forms.eyebrow}</p>
+      <h2>{give.forms.headline}</h2>
+      <p class="lead lead--narrow">{give.forms.lead}</p>
+      <div class="form-grid">
+        {
+          give.forms.items.map((form) => (
+            <article class="form-card" id={form.id}>
+              <h3>{form.title}</h3>
+              <p>{form.intro}</p>
+              <form action={form.action} method={form.method}>
+                {(form.fields as Field[]).map((field) => (
+                  <label class="field">
+                    <span>
+                      {field.label}
+                      {field.required ? <abbr title="required">*</abbr> : null}
+                    </span>
+                    {field.type === 'textarea' ? (
+                      <textarea name={field.name} rows="4" required={field.required} />
+                    ) : field.type === 'select' ? (
+                      <select name={field.name} required={field.required}>
+                        <option value="">Select</option>
+                        {field.options?.map((option) => (
+                          <option value={option}>{option}</option>
+                        ))}
+                      </select>
+                    ) : (
+                      <input
+                        type={field.type}
+                        name={field.name}
+                        required={field.required}
+                      />
+                    )}
+                  </label>
+                ))}
+                <button class="btn-white" type="submit">{form.submit}</button>
+                <p class="fine-print">{form.note}</p>
+              </form>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

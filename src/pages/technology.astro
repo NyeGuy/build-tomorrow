@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MediaBracket from '../components/MediaBracket.astro';
+import WhiteButton from '../components/WhiteButton.astro';
+import site from '../../content/site.json';
+import technology from '../../content/technology.json';
+import { fundUrl } from '../lib/funds';
+---
+
+<BaseLayout title={`${technology.headline} — ${site.name}`}>
+  <section class="band hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">{technology.eyebrow}</p>
+        <h1>{technology.headline}</h1>
+        <p class="lead">{technology.lead}</p>
+        {technology.body.map((para) => <p>{para}</p>)}
+        <div class="cta-row">
+          <WhiteButton href={fundUrl(technology.cta.fund)} external>
+            {technology.cta.label}
+          </WhiteButton>
+        </div>
+      </div>
+      <MediaBracket
+        label={technology.photo.bracket}
+        caption={technology.photo.caption}
+        ratio="5 / 4"
+      />
+    </div>
+  </section>
+</BaseLayout>
